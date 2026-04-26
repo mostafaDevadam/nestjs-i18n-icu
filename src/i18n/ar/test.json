@@ -7,5 +7,9 @@
         "new":  "{name}: جديد",
         "message":  "{gender, select, female {هي متصلة} male {هو متصل} other {هم متصلون}} عبر الإنترنت."
     },
-    "message":  "{gender, select, female {هي متصلة} male {هو متصل} other {هم متصلون}} عبر الإنترنت."
+    "message":  "{gender, select, female {هي متصلة} male {هو متصل} other {هم متصلون}} عبر الإنترنت.",
+    "auth": {
+        "register" :"تسجيل",
+        "login" :"تسجيل دخول"
+    }
 }

@@ -8,5 +8,9 @@
 		"message": "{gender, select, female {She is} male {He is} other {They are}} online."
 
 	},
-	"message": "{gender, select, female {She is} male {He is} other {They are}} online."
+	"message": "{gender, select, female {She is} male {He is} other {They are}} online.",
+	"auth": {
+		"register" :"Register",
+		"login" :"Login"
+	}
 }

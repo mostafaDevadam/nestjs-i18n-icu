@@ -1,4 +1,4 @@
-import { Controller, Get, Req } from '@nestjs/common';
+import { Controller, Get, Post, Req } from '@nestjs/common';
 import { AppService } from './app.service';
 import { I18n, I18nContext, I18nService } from 'nestjs-i18n';
 import { i18n as i18nICU } from './i18n/i18next.config';
@@ -37,4 +37,27 @@ export class AppController {
       },
     };
   }
+
+  @Post("register")
+  async regiter(@I18nD("register-success") register: string){
+
+     return {
+      statusCode: 200,
+      message: register,
+      data: {},
+    }
+
+  }
+
+  @Post("login")
+  async login(@I18nD("login-success") login: string){
+
+    return {
+      statusCode: 200,
+      message: login,
+      data: {},
+    }
+  }
+
+
 }
