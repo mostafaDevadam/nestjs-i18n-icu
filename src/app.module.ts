@@ -1,9 +1,11 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AcceptLanguageResolver, CookieResolver, HeaderResolver, I18nModule, QueryResolver } from 'nestjs-i18n';
 import path, { join } from 'path'
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { initI18next } from './i18n/i18next.config';
+import { I18nMiddleware } from './i18n/i18n.middleware';
 
 console.log("dirname:", __dirname)
 
@@ -43,4 +45,13 @@ console.log("dirname:", __dirname)
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule implements NestModule {
+  constructor() {
+    // Initialize i18next when app starts
+    //initI18next();
+  }
+
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(I18nMiddleware).forRoutes('*');
+  }
+}

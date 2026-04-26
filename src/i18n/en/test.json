@@ -3,6 +3,10 @@
 	"hello": "Hello",
 	"app": {
 		"hello": "Hello",
-		"api": "API is working"
-	}
+		"api": "API is working",
+		"new": "New : {name}",
+		"message": "{gender, select, female {She is} male {He is} other {They are}} online."
+
+	},
+	"message": "{gender, select, female {She is} male {He is} other {They are}} online."
 }

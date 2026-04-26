@@ -3,6 +3,9 @@
     "hello": "مرحبا",
     "app": {
         "hello": "مرحبا",
-        "api": "واجهة برمجة التطبيقات تعمل"
-    }
+        "api": "واجهة برمجة التطبيقات تعمل",
+        "new":  "{name}: جديد",
+        "message":  "{gender, select, female {هي متصلة} male {هو متصل} other {هم متصلون}} عبر الإنترنت."
+    },
+    "message":  "{gender, select, female {هي متصلة} male {هو متصل} other {هم متصلون}} عبر الإنترنت."
 }
